@@ -1,0 +1,37 @@
+PAGE TO PLAY
+
+1. game board
+- container
+    - rows
+        - spaces
+        - cells
+            - style normally
+            - style in focus
+            - correct letter
+            - input
+
+2. buttons to:
+    - check letter
+        - change style 
+    - check whole answer
+        - check letter for everything
+        - if all are correct
+            - say congrats
+            - show economist and context
+    - reveal letter
+    - give up
+
+3. how to iniate a board
+    - take in a quote
+    - automatically generate the board
+        - style: spacing, arrangement, creating a cell for each character
+        - randomising the number for each character
+
+4. buttons to 
+    - settings
+    - see puzzles (see all past puzzles)
+
+PAGE WITH ALL PUZZLES
+
+1. puzzles from each day
+2. a way to update and add new puzzles
