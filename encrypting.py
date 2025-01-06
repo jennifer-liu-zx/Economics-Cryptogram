@@ -26,6 +26,17 @@ def encrypt(s):
     return new_string
 
 
+def when(week: int):
+    res = "Week "
+    res += str(week)
+    res += ", "
+    week_0 = datetime.datetime(2025, 1, 8)
+    date = week_0 + datetime.timedelta(days=7*week)
+    res += str(date)[0:10]
+    res += ": "
+    return res
+
+
 string_week1 = "Everything is worth what its purchaser will pay for it."
 string_week2 = "There ain’t no such thing as a free lunch."
 string_week3 = "It is not from the benevolence of the butcher, \
@@ -49,17 +60,6 @@ and they disagree about economic policy because that's a value judgment..."
 string_week15 = ""
 string_week16 = "The curious task of economics is to demonstrate to men \
 how little they really know about what they imagine they can design."
-
-
-def when(week: int):
-    res = "Week "
-    res += str(week)
-    res += ", "
-    week_0 = datetime.datetime(2025, 1, 8)
-    date = week_0 + datetime.timedelta(days=7*week)
-    res += str(date)[0:10]
-    res += ": "
-    return res
 
 
 print(when(1) + encrypt(string_week1))
