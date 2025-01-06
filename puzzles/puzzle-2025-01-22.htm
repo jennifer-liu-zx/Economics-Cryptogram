@@ -2,9 +2,10 @@
 <html lang="en">
 
 
-<!-- 1. change the number of columns (line 23)
-     2. change the date (line 31)
-     3. change the quote (from line 79) -->
+<!-- 1. change the number of columns (line 24)
+     2. change the date (line 32)
+     3. change the quote (from line 80) 
+     4. change the reveal file name (line 299) -->
 
 <head>
     <meta charset="UTF-8" />
@@ -21,7 +22,7 @@
             display: grid;
             grid-gap: 5px;
             /* change the number of columns!! */
-            grid-template-columns: repeat(10, 32px);
+            grid-template-columns: repeat(14, 32px);
         }    
     </style>
 
@@ -84,16 +85,15 @@
                 <script>
 
                     // Change the quote!!
-                    let row11 = ' A RISING '
-                    let row12 = 'TIDE LIFTS'
-                    let row13 = 'ALL BOATS.'
+                    const gridData = [" THERE AIN'T ".split(""), 
+                                      "NO SUCH THING".split(""), 
+                                      "  AS A FREE  ".split(""),
+                                      "    LUNCH.   ".split("")];
 
-                    const gridData = [row11.split(""), row12.split(""), row13.split("")];
-
-                    let row21 = ' A RISING '
-                    let row22 = 'TIDE LIFTS'
-                    let row23 = 'ALL BOATS.'
-                    const cluesData = [row21.split(""), row22.split(""), row23.split("")];
+                    const cluesData = [" CUFBF MWL’C ".split(""), 
+                                       "LE QRXU CUWLS".split(""), 
+                                       "  MQ M VBFF  ".split(""),
+                                       "    KRLXU.   ".split("")];
                     
                     function createGrid(gridData, cluesData) {
                         const gridContainer = document.querySelector('.puzzle-grid');
@@ -109,7 +109,6 @@
                                 const cellDiv = document.createElement('div');
                                 cellDiv.classList.add('cell');
 
-                                // Check for punctuation or space using a regex
                                 if (/[^A-Za-z0-9]/.test(cellData)) {
                                     // Fixed cell for punctuation or spaces
                                     const fixedCell = document.createElement('div');
@@ -117,10 +116,9 @@
                                     fixedCell.textContent = cellData;
                                     cellDiv.appendChild(fixedCell);
 
-                                    // Clue cell for fixed cells (may remain empty for punctuation cells)
                                     const clueCell = document.createElement('div');
                                     clueCell.classList.add('clue-cell');
-                                    clueCell.textContent = ''; // No clue for punctuation
+                                    clueCell.textContent = '';
                                     cellDiv.appendChild(clueCell);
                                 } else {
                                     // Answer cell
@@ -138,11 +136,10 @@
                                     };
                                     cellDiv.appendChild(inputField);
 
-                                    // Clue cell with unique clue number
                                     const clueCell = document.createElement('div');
                                     clueCell.classList.add('clue-cell');
                                     const clueText = document.createElement('p');
-                                    clueText.textContent = clueData || ''; // Handle undefined clues
+                                    clueText.textContent = clueData || '';
                                     clueCell.appendChild(clueText);
                                     cellDiv.appendChild(clueCell);
                                 }
@@ -249,17 +246,17 @@
                 }
 
                 function checkAll() {
-                    const cells = Array.from(document.querySelectorAll('.puzzle-grid .cell')); // Select all cells
+                    const cells = Array.from(document.querySelectorAll('.puzzle-grid .cell'));
                     let allCorrect = true;
 
                     cells.forEach(cell => {
-                        const inputField = cell.querySelector('input'); // Find the input field inside the cell
-                        const ansCell = cell.querySelector('.ans-cell'); // Find the answer cell
+                        const inputField = cell.querySelector('input');
+                        const ansCell = cell.querySelector('.ans-cell');
 
                         if (inputField && ansCell) {
                             if (inputField.value.toUpperCase() !== ansCell.id.toUpperCase()) {
                                 allCorrect = false;
-                                inputField.value = ''; // Reset the input field if the answer is incorrect
+                                inputField.value = '';
                             }
                         }
                     });
@@ -298,7 +295,7 @@
             </script>
 
     </div>
-
-    <button id="finish-button" style="display: none;" onclick="window.location.href = '../reveals/reveal-2025-01-15.htm';">Learn More!</button>
+    <!-- Change the reveal file name! -->
+    <button id="finish-button" style="display: none;" onclick="window.location.href = '../reveals/reveal-2025-01-22.htm';">Learn More!</button>
 
 </body>
