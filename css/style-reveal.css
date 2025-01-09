@@ -16,9 +16,92 @@
 
 body {
     background-image: url("../assets/old-paper.jpeg");
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: 'SyneMono', monospace;
+}
+
+h3 {
+    font-family: 'SyneMono', monospace;
+    font-size: 21px;
+    justify-content: center;
+    }
+
+.stamp {
+    position: relative;
+    rotate: 8deg;
+    z-index: -9999;
+    width: 480px;
+    height: 270px;
+    background-image: url('../assets/cryptogram-logo-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 90%;
+}
+
+.watermark {
+    position: fixed;
+    right: -200px;
+    bottom: 223px;
+    rotate:-90deg;
+    font-family: 'SyneMono', monospace;
+    font-size: 21px;
+}
+
+.social-media-container {
+    position: fixed;
+    right: 40px;
+    bottom: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 32px);
+    grid-gap: 10px;
+}
+
+.social-media {
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    position: relative;
+    margin-top: -10px;
+    font-size: 48px;
+}
+
+p {
+    max-width: 800px;
+}
+
+.quote-block {
+    font-size: 18px;
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.credit {
+    font-style: italic;
+    text-align: right;
+}
+
+button:hover {
+    box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.circle-button {
+    height: 32px;
+    width: 32px;
+    background-size: auto;
+    border-radius: 50%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
 }
