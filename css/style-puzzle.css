@@ -24,26 +24,25 @@ body {
     font-family: 'SyneMono', monospace;
 }
 
-h1 {display: flex;
+h1 {
     position: relative;
-    margin-top: 5%;
+    margin-top: -20px;
     justify-content: center;
     font-family: 'Cinzel', serif;
     font-size: 48px;
     text-wrap: nowrap;  
     }
 
-h2 {display: flex;
-    position: relative;
-    font-family: 'SyneMono', monospace;
-    font-size: 48px;
+h2 {position: relative;
+    margin-top: -10px;
     justify-content: center;
-    text-wrap: nowrap;
+    font-family: 'SyneMono', serif;
+    font-size: 48px;
+    text-wrap: nowrap;  
     }
 
 h3 {display: flex;
     position: relative;
-    margin-top: 2%;
     font-family: 'SyneMono', monospace;
     font-size: 21px;
     justify-content: center;
@@ -51,9 +50,8 @@ h3 {display: flex;
     }
 
 .stamp {
-    position: absolute;
-    top: 155px;
-    left: 110px;
+    position: relative;
+    rotate: 8deg;
     z-index: -9999;
     width: 480px;
     height: 270px;
@@ -65,18 +63,19 @@ h3 {display: flex;
 
 .watermark {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    right: -200px;
+    bottom: 223px;
+    rotate:-90deg;
     font-family: 'SyneMono', monospace;
     font-size: 21px;
 }
 
 .social-media-container {
     position: fixed;
-    right: 10px;
-    bottom: 40px;
+    right: 40px;
+    bottom: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 32px);
+    grid-template-rows: repeat(3, 32px);
     grid-gap: 10px;
 }
 
