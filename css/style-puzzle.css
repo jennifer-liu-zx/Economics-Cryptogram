@@ -75,7 +75,7 @@ h3 {display: flex;
     right: 40px;
     bottom: 10px;
     display: grid;
-    grid-template-rows: repeat(3, 32px);
+    grid-template-rows: repeat(4, 32px);
     grid-gap: 10px;
 }
 
@@ -91,7 +91,7 @@ h3 {display: flex;
     display: none;
     position: absolute;
     left: 50%;
-    top: 0%;
+    top: 80px;
     transform: translate(-50%, 30%);
     padding: 0;
     margin: 0;
@@ -103,33 +103,31 @@ h3 {display: flex;
 }
 
 .instructions-title {
-    transform: translate(0, -10px);
-    font-family: 'Cinzel', serif;
+    transform: translate(0, -20px);
+    font-family: 'SyneMono', monospace;
     text-align: center;
     margin-top: 175px;
     font-size: 36px;
     font-weight: bold;
     color: rgb(229, 31, 31);
-    text-wrap: nowrap;  
 }
 
 .instructions-text {
     max-width: 300px;   
-    transform: translate(0, -10px);       /* Restricts the width of the text box to 400px */
-    width: 100%;               /* Ensures the width adjusts within the max-width */
+    transform: translate(0, -20px);
+    width: 100%;
     font-family: 'SyneMono', monospace;
-    font-size: 21;
+    font-size: 18px;
     color: black;
-    padding: 10px;             /* Adds padding inside the text box */
-    box-sizing: border-box;    /* Includes padding in the width calculation */
+    padding: 10px;
+    box-sizing: border-box;
     margin: 0 auto;
-    text-wrap: nowrap;            /* Centers the .popup-text element horizontally in its parent */
 }
 
 .puzzle-grid {
     display: flex;
     position: relative;
-    margin-top: 5%;
+    margin-top: 3%;
     flex-direction: column;
 }
 
@@ -139,7 +137,7 @@ h3 {display: flex;
     border: 1px black;
 }
 
-.cell p{
+.cell p {
     font-size: 18px;
     text-align: center;
     justify-content: center;
@@ -229,7 +227,7 @@ button:hover {
 }
 
 .back {
-    transform: translate(400px, 0px);
+    transform: translate(400px, -30px);
     padding: 0;
 }
 

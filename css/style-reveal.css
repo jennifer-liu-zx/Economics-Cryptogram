@@ -56,7 +56,7 @@ h3 {
     right: 40px;
     bottom: 10px;
     display: grid;
-    grid-template-rows: repeat(3, 32px);
+    grid-template-rows: repeat(4, 32px);
     grid-gap: 10px;
 }
 
@@ -79,7 +79,7 @@ p {
 }
 
 .quote-block {
-    font-size: 18px;
+    font-size: 21px;
     position: relative;
     margin-top: 24px;
     margin-bottom: 24px;
@@ -104,4 +104,32 @@ button:hover {
     text-align: center;
     color: white;
     border: 1px solid black;
+}
+
+.circle-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 32px);
+    grid-gap: 10px;
+}
+
+.circle-button {
+    background-image: url("../assets/leather.jpeg");
+    height: 32px;
+    width: 32px;
+    background-size: auto;
+    border-radius: 50%;
+    font-family: 'SyneMono', monospace;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+}
+
+.back {
+    transform: translate(400px, -30px);
+    padding: 0;
+}
+
+.circle-button:hover {
+    box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.75);
 }

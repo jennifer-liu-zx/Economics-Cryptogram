@@ -19,14 +19,42 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* Full screen height */
             margin: 0;
             font-family: 'SyneMono', monospace;
         }
     </style>
+
     <div class="menu-background start">
+        <div class="watermark">Brought to you by NUS Economics Society</div>
+        <div class="social-media-container">
+            <a href="https://forms.office.com/r/Zk7ybRtX4w" target="_blank" class="social-media" style="background-image: url(assets/social-media-icons/feedback-icon.png);" title="Feedback form"></a>
+            <a href="https://nuseconomicssociety.com/" target="_blank" class="social-media" style="background-image: url(assets/social-media-icons/website-icon.png);"></a>
+            <a href="https://www.instagram.com/nuseconsoc/?hl=en" target="_blank" class="social-media" style="background-image: url(assets/social-media-icons/instagram-icon.png);"></a> 
+            <a href="https://sg.linkedin.com/company/nuseconomicssociety" target="_blank" class="social-media" style="background-image: url(assets/social-media-icons/linkedin-icon.png);"></a> 
+        </div>
+        
         <button class="logo" onclick="window.location.href='0-menu.htm'"></button>
+        <button class="circle-button" style="margin-top: 68%; margin-left: 50%; transform: translateX(-50%);" onclick="openInstructions()" title="Instructions">!</button>
     </div>
     <!-- <button class="start-button" onclick="window.location.href='0-menu.htm';">Start →</button> -->
     <!-- <button class="open-button" onclick="window.location.href='0-menu.htm';">↑ Open</button> -->
+
+    <div class="instructions-popup" id="instr">
+        <p class="instructions-title">Take note:</p>
+        <p class="instructions-text">1. Game works best on a laptop or desktop.</p>
+        <p class="instructions-text">2. If you are playing on mobile, please use landscape mode.</p>
+        <p class="instructions-text">3. Click the logo to start.</p>
+        <button class="circle-button back" onclick="closeInstructions()">←</button>
+
+        <script>
+            function openInstructions() {
+                document.getElementById("instr").style.display = "block";
+            }
+
+            function closeInstructions() {
+                document.getElementById("instr").style.display = "none";
+            }
+        </script>
+    </div>
 </body>

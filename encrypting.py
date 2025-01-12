@@ -14,6 +14,8 @@ def encrypt(s):
     d = {}
     for key in x:
         chosen = random.choice(y)
+        while key==chosen:
+            chosen = random.choice(y)
         d[key] = chosen
         y.remove(chosen)
 
@@ -49,15 +51,15 @@ They forget that the state lives at the expense of everyone."
 string_week7 = "In the long run, we are all dead."
 string_week8 = "Every good cause is worth some inefficiency."
 string_week9 = "Sometimes pessimism or optimism gets popular, and it's contagious."
-string_week10 = "All models are wrong, some are useful."
-string_week11 = "If all economists were laid end to end, they would still not reach a conclusion."
+string_week10 = "From each according to his ability, to each according to his needs."
+string_week11 = "All models are wrong, some are useful."
 string_week12 = "Economics runs the world."
-string_week13 = "The ideas of economists and political philosophers, \
+string_week13 = "If all economists were laid end to end, they would still not reach a conclusion."
+string_week14 = "The ideas of economists and political philosophers, \
 both when they are right and when they are wrong are more powerful than is commonly understood. \
 Indeed, the world is ruled by little else."
-string_week14 = "Economists agree about economics - and that's a science - \
-and they disagree about economic policy because that's a value judgment..."
-string_week15 = ""
+string_week15 = "Economists agree about economics - and that's a science - \
+and they disagree about economic policy because that's a value judgement..."
 string_week16 = "The curious task of economics is to demonstrate to men \
 how little they really know about what they imagine they can design."
 
