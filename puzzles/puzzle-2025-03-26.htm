@@ -212,9 +212,8 @@
 
                 function showFinish() {
                     const finishButton = document.getElementById('finish-button');
-                    if (finishButton) {
-                        finishButton.style.display = 'block';
-                    }
+                    finishButton.style.display = 'block';
+                    document.getElementById('finish-button').scrollIntoView();
                 }
 
                 function hideFinish() {
